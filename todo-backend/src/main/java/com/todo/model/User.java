@@ -1,7 +1,11 @@
 package com.todo.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 public class User {
@@ -10,6 +14,9 @@ public class User {
     private String name;
     private String lastName;
     private String password;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Task> tasks;
 
     public User()
     {
@@ -56,5 +63,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
     }
 }
