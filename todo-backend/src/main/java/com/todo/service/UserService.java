@@ -21,4 +21,15 @@ public class UserService implements IUserService{
         User user = userRepository.findById(email).orElseThrow(() -> new UserNotFoundException("User not found!"));
         return user;
     }
+
+    @Override
+    public void deleteUser(User user) {
+        try {
+            userRepository.delete(user);
+        }
+        catch (Exception e)
+        {
+            System.out.println("User not found");
+        }
+    }
 }

@@ -7,4 +7,6 @@ public interface IUserService {
     User saveUser(User user);
 
     User getUser(String email);
+
+    void deleteUser(User user);
 }

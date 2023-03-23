@@ -31,4 +31,17 @@ public class UserController {
             return null;
         }
     }
+
+    @PostMapping("/getUser/{email}")
+    public User getUser(@PathVariable("email") String email)
+    {
+        return service.getUser(email);
+    }
+
+    @PostMapping("/delete/{email}")
+    public String delete(@PathVariable("email") String email)
+    {
+        service.deleteUser(service.getUser(email));
+        return "deleted";
+    }
 }
