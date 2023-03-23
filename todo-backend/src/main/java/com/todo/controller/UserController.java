@@ -1,6 +1,5 @@
 package com.todo.controller;
 
-import com.todo.model.LoginContext;
 import com.todo.model.User;
 import com.todo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,31 +13,22 @@ public class UserController {
     private UserService service;
 
     @PostMapping("/register")
-    public String add(@RequestBody User userToRegister)
+    public User register(@RequestBody User user)
     {
-        User user = service.getUser(userToRegister.getEmail());
-        if (user == null)
-        {
-            service.saveUser(userToRegister);
-            return "Successfully registered!";
-        }
-        else
-        {
-            return "User already exists!";
-        }
+        return service.saveUser(user);
     }
 
-    @PostMapping("/login")
-    public String getUser(@RequestBody LoginContext context)
+    @PostMapping("/login/{email}_{password}")
+    public User login(@PathVariable("email") String email, @PathVariable("password") String password)
     {
-        User user = service.getUser(context.email);
-        if (user != null && user.getPassword().equals(context.password))
+        User user = service.getUser(email);
+        if (user != null && user.getPassword().equals(password))
         {
-            return "Successfully logged in!";
+            return user;
         }
         else
         {
-            return "Incorrect login!";
+            return null;
         }
     }
 }

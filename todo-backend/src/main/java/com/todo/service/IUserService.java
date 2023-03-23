@@ -4,7 +4,7 @@ import com.todo.model.User;
 
 public interface IUserService {
 
-    void saveUser(User user);
+    User saveUser(User user);
 
     User getUser(String email);
 }

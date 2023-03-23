@@ -1,5 +1,6 @@
 package com.todo.service;
 
+import com.todo.exception.UserNotFoundException;
 import com.todo.model.User;
 import com.todo.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,18 +12,13 @@ public class UserService implements IUserService{
     private IUserRepository userRepository;
 
     @Override
-    public void saveUser(User user) {
-        userRepository.save(user);
+    public User saveUser(User user) {
+        return userRepository.save(user);
     }
 
     @Override
     public User getUser(String email) {
-        User toReturn = null;
-        if (userRepository.findById(email) != null)
-        {
-            toReturn = userRepository.findById(email).get();
-        }
-
-        return toReturn;
+        User user = userRepository.findById(email).orElseThrow(() -> new UserNotFoundException("User not found!"));
+        return user;
     }
 }
