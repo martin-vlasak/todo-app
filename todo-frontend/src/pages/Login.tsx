@@ -17,7 +17,6 @@ function Login() {
 
   const navigate = useNavigate();
 
-
   function handleEmailChange(event: React.ChangeEvent<HTMLInputElement>)
   {
     setEmail(event.target.value);
