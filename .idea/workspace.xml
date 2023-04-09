@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57798daf-3a4d-4acc-aa36-332f0375c439" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/todo-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/service/RegistrationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo-frontend/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo-frontend/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/service/RegistrationForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/repository/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-backend/src/main/java/com/todo/service/RegistrationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/todo-frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-frontend/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/todo-frontend/src/pages/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-frontend/src/pages/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/todo-frontend/src/pages/Register.tsx" afterDir="false" />
@@ -112,7 +103,7 @@
       <updated>1680772842579</updated>
       <workItem from="1680772843750" duration="1497000" />
       <workItem from="1680774381794" duration="1759000" />
-      <workItem from="1681045495003" duration="7929000" />
+      <workItem from="1681045495003" duration="15188000" />
     </task>
     <servers />
   </component>
