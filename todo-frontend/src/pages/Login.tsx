@@ -31,7 +31,7 @@ function Login() {
   function handleLogin(event: React.MouseEvent<HTMLElement>)
   {
     event.preventDefault();
-      fetch('http://localhost:8080/user/login/' + email, {
+      fetch('http://localhost:8080/user/' + email, {
         method:'POST'
       })
       .then(response => {

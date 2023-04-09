@@ -18,19 +18,11 @@ public class UserController {
     @PostMapping("/register")
     public User register(@RequestBody User user)
     {
-        User tmp = service.getUser(user.getEmail());
-        if (tmp != null)
-        {
-            return null;
-        }
-        else
-        {
-            return service.saveUser(user);
-        }
+        return service.saveUser(user);
     }
 
-    @PostMapping("/login/{email}")
-    public User login(@PathVariable("email") String email)
+    @PostMapping("/{email}")
+    public User getUser(@PathVariable("email") String email)
     {
         User user = service.getUser(email);
         if (user != null)
