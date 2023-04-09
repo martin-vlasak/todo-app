@@ -1,15 +1,14 @@
 package com.todo.model;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
 @Entity
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer userId;
     private String email;
     private String name;
     private String lastName;
@@ -31,6 +30,14 @@ public class User {
                 ", lastName='" + lastName + '\'' +
                 ", password='" + password + '\'' +
                 '}';
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getEmail() {
