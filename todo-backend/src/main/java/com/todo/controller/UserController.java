@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("user")
 public class UserController {
 
@@ -21,8 +21,8 @@ public class UserController {
         return service.saveUser(user);
     }
 
-    @PostMapping("/login/{email}")
-    public User login(@PathVariable("email") String email)
+    @PostMapping("/{email}")
+    public User getUser(@PathVariable("email") String email)
     {
         User user = service.getUser(email);
         if (user != null)
@@ -33,12 +33,6 @@ public class UserController {
         {
             return null;
         }
-    }
-
-    @PostMapping("/getUser/{email}")
-    public User getAllUsers()
-    {
-        return null;
     }
 
     @PostMapping("/delete/{email}")
