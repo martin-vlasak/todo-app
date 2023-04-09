@@ -23,8 +23,7 @@ function Login() {
   function handlePasswordChange(event: React.ChangeEvent<HTMLInputElement>)
   {
     setPassword(event.target.value)
-  }
-
+  };
 
   return (
     <MDBContainer className="p-3 my-5 d-flex flex-column w-50 border border-1 border-dark rounded-3">
